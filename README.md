@@ -2,6 +2,12 @@
 
 A small, browser-based CO₂ emissions calculator for trips in Brazil. It lets you pick origin/destination (Brazilian state capitals), auto-fills the distance, and estimates total CO₂ emissions based on the chosen transport mode. It also shows environmental equivalents and a simple impact analysis with recommendations.
 
+## 🌐 Live Demo
+
+**Access the application here:** [https://fsales.github.io/carbon-calculator/](https://fsales.github.io/carbon-calculator/)
+
+The application is automatically deployed to GitHub Pages from the main branch.
+
 ## 📚 Features
 
 - **Select origin and destination** from all 27 Brazilian state capitals
