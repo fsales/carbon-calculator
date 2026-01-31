@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculadora de Emissões de CO₂ para viagens entre capitais brasileiras">
+  <title>Calculadora de Carbono - Brasil</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>🌍 Calculadora de Carbono - Brasil</h1>
+      <p class="subtitle">Calcule as emissões de CO₂ das suas viagens entre capitais brasileiras</p>
+    </header>
+
+    <main class="main-content">
+      <section class="calculator-section">
+        <form id="calculator-form" class="calculator-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="origin">Origem</label>
+              <select id="origin" name="origin" required>
+                <option value="">Selecione a cidade</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="destination">Destino</label>
+              <select id="destination" name="destination" required>
+                <option value="">Selecione a cidade</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="distance">Distância (km)</label>
+              <input 
+                type="number" 
+                id="distance" 
+                name="distance" 
+                readonly 
+                placeholder="Auto-calculado"
+                min="0"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="transport">Meio de Transporte</label>
+              <select id="transport" name="transport" required>
+                <option value="car">Carro</option>
+                <option value="bus">Ônibus</option>
+                <option value="plane">Avião</option>
+                <option value="motorcycle">Motocicleta</option>
+                <option value="train">Trem</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="roundTrip" name="roundTrip">
+                <span>Ida e Volta</span>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label for="frequency">Frequência Mensal</label>
+              <input 
+                type="number" 
+                id="frequency" 
+                name="frequency" 
+                value="1" 
+                min="1" 
+                max="30"
+              >
+            </div>
+          </div>
+
+          <button type="submit" class="btn-calculate">Calcular Emissões</button>
+        </form>
+      </section>
+
+      <section id="results" class="results-section hidden">
+        <h2>Resultados</h2>
+        
+        <div class="emissions-card">
+          <div class="emissions-main">
+            <span class="emissions-label">Emissões Totais de CO₂</span>
+            <div class="emissions-value-wrapper">
+              <span id="emissions-value" class="emissions-value">0</span>
+              <span class="emissions-unit">kg</span>
+            </div>
+            <div id="trip-details" class="trip-details"></div>
+          </div>
+        </div>
+
+        <div class="equivalents-section">
+          <h3>Equivalências Ambientais</h3>
+          <div id="equivalents" class="equivalents-grid"></div>
+        </div>
+
+        <div class="impact-section">
+          <h3>Análise de Impacto</h3>
+          <div id="impact-analysis" class="impact-card"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>💡 Dados baseados em fatores de emissão médios para cada meio de transporte</p>
+      <p class="footer-note">Os valores são estimativas e podem variar com base em diversos fatores</p>
+    </footer>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
