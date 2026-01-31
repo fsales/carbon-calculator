@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de CO₂ - Brasil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Calculadora de Emissões de CO₂</h1>
+            <p class="subtitle">Calcule as emissões de carbono da sua viagem entre capitais brasileiras</p>
+        </header>
+
+        <main>
+            <section class="calculator-section">
+                <form id="calculatorForm">
+                    <div class="form-group">
+                        <label for="origin">Origem:</label>
+                        <select id="origin" name="origin" required>
+                            <option value="">Selecione a cidade de origem</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination">Destino:</label>
+                        <select id="destination" name="destination" required>
+                            <option value="">Selecione a cidade de destino</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="distance">Distância (km):</label>
+                        <input type="number" id="distance" name="distance" readonly placeholder="Será calculada automaticamente">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="transport">Modo de Transporte:</label>
+                        <select id="transport" name="transport" required>
+                            <option value="">Selecione o meio de transporte</option>
+                            <option value="car">Carro (gasolina)</option>
+                            <option value="car-diesel">Carro (diesel)</option>
+                            <option value="bus">Ônibus</option>
+                            <option value="plane">Avião</option>
+                            <option value="train">Trem</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="passengers">Número de Passageiros:</label>
+                        <input type="number" id="passengers" name="passengers" min="1" value="1" required>
+                    </div>
+
+                    <button type="submit" class="btn-calculate">Calcular Emissões</button>
+                </form>
+            </section>
+
+            <section id="results" class="results-section" style="display: none;">
+                <h2>Resultados</h2>
+                
+                <div class="result-card">
+                    <h3>📊 Emissões Totais</h3>
+                    <p class="emissions-value" id="totalEmissions">0 kg CO₂</p>
+                    <p class="per-person" id="perPerson">0 kg CO₂ por pessoa</p>
+                </div>
+
+                <div class="result-card">
+                    <h3>🌳 Equivalentes Ambientais</h3>
+                    <div id="equivalents"></div>
+                </div>
+
+                <div class="result-card">
+                    <h3>💡 Análise de Impacto</h3>
+                    <div id="impact"></div>
+                </div>
+
+                <div class="result-card">
+                    <h3>♻️ Recomendações</h3>
+                    <div id="recommendations"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 Calculadora de CO₂ Brasil - Dados aproximados para fins educacionais</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
