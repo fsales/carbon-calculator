@@ -1,4 +1,4 @@
-// Brazilian State Capitals with coordinates
+// Brazilian cities (state capitals and major cities) with coordinates
 const brazilianCapitals = [
     { name: "São Paulo, SP", lat: -23.5505, lon: -46.6333 },
     { name: "Rio de Janeiro, RJ", lat: -22.9068, lon: -43.1729 },
@@ -173,7 +173,7 @@ function displayEquivalents(emissions) {
     const equivalentsDiv = document.getElementById('equivalents');
     
     // Average tree absorbs about 22 kg CO₂ per year
-    const trees = (emissions / 22 * 365).toFixed(1);
+    const trees = (emissions / (22 / 365)).toFixed(1);
     
     // Average car emits about 4.6 metric tons per year
     const carDays = (emissions / (4600 / 365)).toFixed(1);

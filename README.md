@@ -1,10 +1,10 @@
 # 🌍 Carbon Calculator - Calculadora de CO₂ Brasil
 
-A small, browser-based CO₂ emissions calculator for trips in Brazil. Calculate carbon emissions for travel between Brazilian state capitals with automatic distance calculation and detailed environmental impact analysis.
+A small, browser-based CO₂ emissions calculator for trips in Brazil. Calculate carbon emissions for travel between Brazilian cities with automatic distance calculation and detailed environmental impact analysis.
 
 ## Features
 
-- 🗺️ **Brazilian State Capitals**: Select from 31 major Brazilian cities
+- 🗺️ **Brazilian Cities**: Select from 31 major Brazilian cities (including all state capitals)
 - 📏 **Automatic Distance Calculation**: Uses Haversine formula to calculate distance between cities
 - 🚗 **Multiple Transport Modes**: 
   - Car (gasoline)
